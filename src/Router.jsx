@@ -11,9 +11,9 @@ const Router = () => {
     },
 
     {
-      path: '/:name',
+      path: "/:name",
       element: <App />,
-    }
+    },
   ]);
 
   return <RouterProvider router={router} />;

@@ -1,7 +1,7 @@
 export default function Homepage() {
-    return (
-        <div className="bg-[url('./assets/homepage-banner.jpg')] flex-1 w-full bg-center bg-no-repeat bg-cover">
-            <h1>Test</h1>
-        </div>
-    )
+  return (
+    <div className="w-full flex-1 bg-[url('./assets/homepage-banner.jpg')] bg-cover bg-center bg-no-repeat">
+      <h1>Test</h1>
+    </div>
+  );
 }

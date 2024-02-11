@@ -4,15 +4,11 @@ import Shop from "./Components/Shop";
 import Nav from "./Components/Nav";
 
 function App() {
-  const {name} = useParams();
+  const { name } = useParams();
   return (
     <div className="flex h-screen flex-col items-center">
       <Nav />
-      {name === "shop" ? (
-        <Shop />
-      ) : (
-        <Homepage />
-      )}
+      {name === "shop" ? <Shop /> : <Homepage />}
     </div>
   );
 }
