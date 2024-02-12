@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        anton: ["Anton", "sans-serif"],
+        arvo: ["Arvo", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
