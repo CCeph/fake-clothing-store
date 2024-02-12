@@ -13,7 +13,7 @@ it("does not initially show cart", () => {
   expect(screen.getByTestId("cart")).not.toBeVisible();
 });
 
-it.skip("shows cart when cart button is clicked", async () => {
+it("shows cart when cart button is clicked", async () => {
   const user = userEvent.setup();
   render(
     <MemoryRouter>
@@ -25,5 +25,5 @@ it.skip("shows cart when cart button is clicked", async () => {
 
   await user.click(cartButton);
 
-  expect(screen.getByRole("complementary")).toBeVisible();
+  expect(screen.getByRole("complementary", { name: /cart/i })).toBeVisible();
 });
