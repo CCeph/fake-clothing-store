@@ -4,7 +4,9 @@ import logo from "../assets/urban.png";
 export default function Nav() {
   return (
     <nav className="flex w-full items-stretch justify-between justify-items-center bg-black text-white">
-      <img src={logo} className="h-24 w-24" />
+      <Link to={"/"}>
+        <img src={logo} className="h-24 w-24" />
+      </Link>
       <ul className="flex justify-items-center">
         <Link to={"/"} className="flex items-center p-8 hover:bg-gray-800">
           Home
