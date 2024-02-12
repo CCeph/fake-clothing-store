@@ -2,7 +2,8 @@ export default function Cart() {
   return (
     <aside
       aria-label="cart"
-      className="fixed right-0 flex h-screen flex-col bg-black p-7 text-white"
+      data-testid="cart"
+      className="custom-invisible fixed right-0 flex h-screen flex-col bg-black p-7 text-white"
     >
       <div className="flex justify-between gap-20">
         <p>NAN items</p>

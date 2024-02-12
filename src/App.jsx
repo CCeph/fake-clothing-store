@@ -4,6 +4,7 @@ import Shop from "./Components/Shop";
 import Nav from "./Components/Nav";
 import Cart from "./Components/Cart";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
   const [cartVisibility, setCartVisibility] = useState(false);
