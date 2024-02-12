@@ -18,7 +18,7 @@ export default function Nav() {
           Women
         </Link>
       </ul>
-      <h1 className="flex items-center p-7">Cart</h1>
+      <button className="flex items-center p-7">Cart</button>
     </nav>
   );
 }

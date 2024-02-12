@@ -3,8 +3,10 @@ import Homepage from "./Components/Homepage";
 import Shop from "./Components/Shop";
 import Nav from "./Components/Nav";
 import Cart from "./Components/Cart";
+import { useState } from "react";
 
 function App() {
+  const [cartVisibility, setCartVisibility] = useState(false);
   const { name } = useParams();
   return (
     <div className="flex h-screen flex-col items-center">
