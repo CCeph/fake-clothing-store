@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/urban.png";
 
-export default function Nav({ setCartVisibile }) {
+export default function Nav({ setCartVisible }) {
   return (
     <nav className="flex w-full items-stretch justify-between justify-items-center bg-black text-white">
       <Link to={"/"}>
@@ -21,7 +21,7 @@ export default function Nav({ setCartVisibile }) {
       <button
         className="flex items-center p-7"
         onClick={() => {
-          setCartVisibile(true);
+          setCartVisible(true);
         }}
       >
         Cart

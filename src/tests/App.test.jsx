@@ -27,3 +27,21 @@ it("shows cart when cart button is clicked", async () => {
 
   expect(screen.getByRole("complementary", { name: /cart/i })).toBeVisible();
 });
+
+it("hides cart when cart close button is clicked", async () => {
+  const user = userEvent.setup();
+
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>,
+  );
+
+  const cartButton = screen.getByRole("button", { name: /cart/i });
+  await user.click(cartButton);
+
+  const closeButton = screen.getByRole("button", { name: /close/i });
+  await user.click(closeButton);
+
+  expect(screen.getByTestId("cart")).not.toBeVisible();
+});

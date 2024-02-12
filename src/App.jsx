@@ -7,12 +7,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [cartVisibile, setCartVisibile] = useState(false);
+  const [cartVisible, setCartVisible] = useState(false);
   const { name } = useParams();
 
   /* useEffect(() => {
     const handler = () => {
-      setCartVisibile(false);
+      setCartVisible(false);
     };
 
     document.addEventListener("click", handler);
@@ -20,9 +20,9 @@ function App() {
 
   return (
     <div className="flex h-screen flex-col items-center">
-      <Nav setCartVisibile={setCartVisibile} />
+      <Nav setCartVisible={setCartVisible} />
       {name === "shop" ? <Shop /> : <Homepage />}
-      <Cart cartVisibile={cartVisibile} />
+      <Cart cartVisible={cartVisible} setCartVisible={setCartVisible} />
     </div>
   );
 }

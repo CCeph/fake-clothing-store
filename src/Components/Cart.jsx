@@ -1,15 +1,21 @@
-export default function Cart({ cartVisibile }) {
+export default function Cart({ cartVisible, setCartVisible }) {
   return (
     <aside
       aria-label="cart"
       data-testid="cart"
       className={
-        (!cartVisibile && "custom-invisible ") +
+        (!cartVisible && "custom-invisible ") +
         " fixed right-0 flex h-screen flex-col bg-black p-7 text-white"
       }
     >
       <div className="flex justify-between gap-20">
-        <p>NAN items</p>
+        <button
+          onClick={() => {
+            setCartVisible(false);
+          }}
+        >
+          Close
+        </button>
         <button>Clear</button>
       </div>
       <hr />
