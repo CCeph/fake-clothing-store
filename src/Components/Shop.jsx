@@ -9,7 +9,7 @@ export default function Shop() {
 
   useEffect(() => {
     fetch(
-      `https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=${pageNumber}&limit=12`,
+      `https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=${pageNumber}&limit=9`,
       {
         mode: "cors",
       },
@@ -41,6 +41,22 @@ export default function Shop() {
   });
 
   return (
-    <div className="grid-cols-auto-fill-300 grid gap-5 p-5">{cardList}</div>
+    <div className="p-7">
+      <div className="grid-cols-auto-fill-300 grid gap-5 p-7">{cardList}</div>
+      <div className="flex w-full justify-center gap-7">
+        <button
+          className="bg-black p-3 text-white"
+          onClick={() => setPageNumber(0)}
+        >
+          1
+        </button>
+        <button
+          className="bg-black p-3 text-white"
+          onClick={() => setPageNumber(8)}
+        >
+          2
+        </button>
+      </div>
+    </div>
   );
 }
