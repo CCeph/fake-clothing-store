@@ -14,5 +14,4 @@ Card.propTypes = {
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
 };
