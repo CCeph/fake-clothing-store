@@ -8,9 +8,12 @@ export default function Shop() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products/?categoryId=1", {
-      mode: "cors",
-    })
+    fetch(
+      `https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=${pageNumber}&limit=10`,
+      {
+        mode: "cors",
+      },
+    )
       .then((response) => {
         if (response.status >= 400) {
           throw new Error("server error");
