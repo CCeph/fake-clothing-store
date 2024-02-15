@@ -9,7 +9,7 @@ export default function Shop() {
 
   useEffect(() => {
     fetch(
-      `https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=${pageNumber}&limit=10`,
+      `https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=${pageNumber}&limit=12`,
       {
         mode: "cors",
       },
