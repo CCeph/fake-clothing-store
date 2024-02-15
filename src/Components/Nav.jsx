@@ -12,10 +12,7 @@ export default function Nav({ setCartVisible }) {
           Home
         </Link>
         <Link to={"/shop"} className="flex items-center p-8 hover:bg-gray-800">
-          Mens
-        </Link>
-        <Link to={"/shop"} className="flex items-center p-8 hover:bg-gray-800">
-          Women
+          Shop
         </Link>
       </ul>
       <button
