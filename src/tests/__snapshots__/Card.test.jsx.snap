@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders card properly 1`] = `
+<div>
+  <div
+    data-testid="shop-item"
+  >
+    <img
+      alt="Insert image here"
+      src="fakeurl"
+    />
+    <p>
+      0
+    </p>
+    <p>
+      name
+    </p>
+    <p>
+      typeName
+    </p>
+  </div>
+</div>
+`;
