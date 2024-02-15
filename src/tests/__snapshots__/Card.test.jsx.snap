@@ -7,7 +7,7 @@ exports[`renders card properly 1`] = `
   >
     <img
       alt="Insert image here"
-      src="fakeurl"
+      src="/src/assets/urban.png"
     />
     <p>
       0
