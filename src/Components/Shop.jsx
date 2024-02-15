@@ -40,5 +40,7 @@ export default function Shop() {
     );
   });
 
-  return <div>{cardList}</div>;
+  return (
+    <div className="grid-cols-auto-fill-300 grid gap-5 p-5">{cardList}</div>
+  );
 }
