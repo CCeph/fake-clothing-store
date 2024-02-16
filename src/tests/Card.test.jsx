@@ -8,10 +8,9 @@ it("renders card properly", () => {
   const image = logo;
   const price = 0;
   const name = "name";
-  const type = "typeName";
   const { container } = render(
     <MemoryRouter>
-      <Card image={image} price={price} name={name} type={type} />
+      <Card image={image} price={price} name={name} />
     </MemoryRouter>,
   );
   expect(container).toMatchSnapshot();

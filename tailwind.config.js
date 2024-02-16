@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         anton: ["Anton", "sans-serif"],
         arvo: ["Arvo", "sans-serif"],
+        ibm: ["IBM Plex Sans", "sans-serif"],
       },
     },
   },
