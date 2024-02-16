@@ -8,7 +8,9 @@ export default function Card({ image, price, name }) {
       <img src={image} alt="Insert image here" />
       <p className="my-1 text-xl font-bold">${price}</p>
       <p className="my-1 text-base">{name}</p>
-      <button className="my-1 bg-black p-3 text-white">Add to Cart</button>
+      <button className="my-1 bg-black p-3 text-white hover:bg-gray-900">
+        Add to Cart
+      </button>
     </div>
   );
 }

@@ -1,3 +1,31 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`renders card properly 1`] = `<div />`;
+exports[`renders card properly 1`] = `
+<div>
+  <div
+    class="font-ibm"
+    data-testid="shop-item"
+  >
+    <img
+      alt="Insert image here"
+      src="https://i.imgur.com/cBuLvBi.jpeg"
+    />
+    <p
+      class="my-1 text-xl font-bold"
+    >
+      $
+      0
+    </p>
+    <p
+      class="my-1 text-base"
+    >
+      name
+    </p>
+    <button
+      class="my-1 bg-black p-3 text-white hover:bg-gray-900"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
