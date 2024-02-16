@@ -45,3 +45,5 @@ it("hides cart when cart close button is clicked", async () => {
 
   expect(screen.getByTestId("cart")).not.toBeVisible();
 });
+
+it.skip("Add test for adding items to cart by mocking a card");

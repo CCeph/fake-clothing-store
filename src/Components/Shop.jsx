@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import PropTypes from "prop-types";
 
-export default function Shop() {
+export default function Shop({ cartItems, setCartItems }) {
   const [itemsList, setItemsList] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [networkError, setNetworkError] = useState(null);
@@ -33,16 +34,19 @@ export default function Shop() {
     return (
       <Card
         key={item.id}
+        id={item.id}
         image={item.images[0]}
         price={item.price}
         name={item.title}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
       ></Card>
     );
   });
 
   return (
     <div className="p-7">
-      <div className="grid-cols-auto-fill-300 grid gap-5 p-7">{cardList}</div>
+      <div className="grid grid-cols-auto-fill-300 gap-5 p-7">{cardList}</div>
       <div className="flex w-full justify-center gap-7">
         <button
           className="bg-black p-3 text-white"
@@ -60,3 +64,8 @@ export default function Shop() {
     </div>
   );
 }
+
+Shop.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+  setCartItems: PropTypes.func.isRequired,
+};
