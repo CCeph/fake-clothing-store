@@ -1,6 +1,23 @@
 import PropTypes from "prop-types";
+import CartItem from "./CartItem";
 
-export default function Cart({ cartVisible, setCartVisible }) {
+export default function Cart({
+  cartVisible,
+  setCartVisible,
+  cartItems,
+  setCartItems,
+}) {
+  const itemsList = cartItems.map((item) => {
+    return (
+      <CartItem
+        key={item.id}
+        image={item.image}
+        name={item.name}
+        price={item.price}
+      ></CartItem>
+    );
+  });
+
   return (
     <aside
       aria-label="cart"
@@ -22,7 +39,7 @@ export default function Cart({ cartVisible, setCartVisible }) {
         <button className="text-lg font-bold">Clear</button>
       </div>
       <hr />
-      <div className="insert-items-here flex-1"></div>
+      <div className="flex-1">{itemsList}</div>
       <hr />
       <div className="flex justify-between gap-20">
         <p>Total: $NAN</p>
@@ -35,4 +52,6 @@ export default function Cart({ cartVisible, setCartVisible }) {
 Cart.propTypes = {
   cartVisible: PropTypes.bool.isRequired,
   setCartVisible: PropTypes.func.isRequired,
+  cartItems: PropTypes.array.isRequired,
+  setCartItems: PropTypes.func.isRequired,
 };

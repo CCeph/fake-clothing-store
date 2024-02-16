@@ -8,19 +8,22 @@ export default function Card({
   cartItems,
   setCartItems,
 }) {
-  const addItemToCart = (id, name, price, image) => {
-    setCartItems([...cartItems, { id, name, price, image }]);
-  };
+  function addItemToCart(id, name, price, image) {
+    setCartItems([
+      ...cartItems,
+      { id: id, name: name, price: price, image: image },
+    ]);
+  }
 
   if (!image.toLowerCase().startsWith("https://i.imgur.com/")) return null;
 
   return (
     <div className="font-ibm" data-testid="shop-item">
-      <img src={image} alt="Insert image here" />
+      <img src={image} alt={"Image of " + name} />
       <p className="my-1 text-xl font-bold">${price}</p>
       <p className="my-1 text-base">{name}</p>
       <button
-        onClick={() => addItemToCart(id, image, price, name)}
+        onClick={() => addItemToCart(id, name, price, image)}
         className="my-1 bg-black p-3 text-white hover:bg-gray-900"
       >
         Add to Cart

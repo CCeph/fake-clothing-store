@@ -10,7 +10,6 @@ function App() {
   const [cartVisible, setCartVisible] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const { name } = useParams();
-  console.log(cartItems);
 
   return (
     <div className="flex h-screen flex-col items-center">
