@@ -10,14 +10,6 @@ function App() {
   const [cartVisible, setCartVisible] = useState(false);
   const { name } = useParams();
 
-  /* useEffect(() => {
-    const handler = () => {
-      setCartVisible(false);
-    };
-
-    document.addEventListener("click", handler);
-  }); */
-
   return (
     <div className="flex h-screen flex-col items-center">
       <Nav setCartVisible={setCartVisible} />
