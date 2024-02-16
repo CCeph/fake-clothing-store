@@ -5,25 +5,26 @@ export default function Cart({ cartVisible, setCartVisible }) {
       data-testid="cart"
       className={
         (!cartVisible && "custom-invisible ") +
-        " font-ibm fixed right-0 flex h-screen flex-col bg-black p-7 text-white"
+        " fixed right-0 flex h-screen flex-col bg-black p-7 font-ibm text-white"
       }
     >
       <div className="flex justify-between gap-20">
         <button
+          className="text-lg font-bold"
           onClick={() => {
             setCartVisible(false);
           }}
         >
           Close
         </button>
-        <button>Clear</button>
+        <button className="text-lg font-bold">Clear</button>
       </div>
       <hr />
       <div className="insert-items-here flex-1"></div>
       <hr />
       <div className="flex justify-between gap-20">
         <p>Total: $NAN</p>
-        <button>Checkout</button>
+        <button className="text-lg font-bold">Checkout</button>
       </div>
     </aside>
   );
