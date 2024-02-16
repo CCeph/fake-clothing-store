@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Cart({ cartVisible, setCartVisible }) {
   return (
     <aside
@@ -29,3 +31,8 @@ export default function Cart({ cartVisible, setCartVisible }) {
     </aside>
   );
 }
+
+Cart.propTypes = {
+  cartVisible: PropTypes.bool.isRequired,
+  setCartVisible: PropTypes.func.isRequired,
+};
