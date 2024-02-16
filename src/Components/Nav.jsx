@@ -3,7 +3,7 @@ import logo from "../assets/urban.png";
 
 export default function Nav({ setCartVisible }) {
   return (
-    <nav className="font-ibm flex w-full items-stretch justify-between justify-items-center bg-black text-white">
+    <nav className="font-ibm flex w-full items-stretch justify-between justify-items-center bg-black text-lg font-bold text-white">
       <Link to={"/"}>
         <img src={logo} className="h-24 w-24" />
       </Link>
