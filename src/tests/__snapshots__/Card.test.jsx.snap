@@ -10,13 +10,11 @@ exports[`renders card properly 1`] = `
       src="/src/assets/urban.png"
     />
     <p>
+      $
       0
     </p>
     <p>
       name
-    </p>
-    <p>
-      typeName
     </p>
   </div>
 </div>
