@@ -7,7 +7,7 @@ exports[`renders card properly 1`] = `
     data-testid="shop-item"
   >
     <img
-      alt="Insert image here"
+      alt="Image of name"
       src="https://i.imgur.com/cBuLvBi.jpeg"
     />
     <p
