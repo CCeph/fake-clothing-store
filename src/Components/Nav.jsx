@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/urban.png";
 
-export default function Nav({ setCartVisible }) {
+export default function Nav({ setCartVisible, cartItems }) {
   return (
-    <nav className="font-ibm flex w-full items-stretch justify-between justify-items-center bg-black text-lg font-bold text-white">
+    <nav className="flex w-full items-stretch justify-between justify-items-center bg-black font-ibm text-lg font-bold text-white">
       <Link to={"/"}>
         <img src={logo} className="h-24 w-24" />
       </Link>
@@ -21,7 +21,7 @@ export default function Nav({ setCartVisible }) {
           setCartVisible(true);
         }}
       >
-        Cart
+        Cart{cartItems.length > 0 && ` (${cartItems.length})`}
       </button>
     </nav>
   );

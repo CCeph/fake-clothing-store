@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="flex h-screen flex-col items-center">
-      <Nav setCartVisible={setCartVisible} />
+      <Nav setCartVisible={setCartVisible} cartItems={cartItems} />
       {name === "shop" ? (
         <Shop cartItems={cartItems} setCartItems={setCartItems} />
       ) : (
