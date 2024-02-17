@@ -9,10 +9,20 @@ export default function Card({
   setCartItems,
 }) {
   function addItemToCart(id, name, price, image) {
-    setCartItems([
-      ...cartItems,
-      { id: id, name: name, price: price, image: image },
-    ]);
+    const itemIndex = cartItems.findIndex((item) => item.id === id);
+    if (itemIndex === -1) {
+      setCartItems([
+        ...cartItems,
+        { id: id, name: name, price: price, image: image, count: 1 },
+      ]);
+    } else {
+      const shallowCartItemsCopy = [...cartItems];
+      const itemCopy = { ...shallowCartItemsCopy[itemIndex] };
+
+      itemCopy.count = itemCopy.count + 1;
+      shallowCartItemsCopy[itemIndex] = itemCopy;
+      setCartItems(shallowCartItemsCopy);
+    }
   }
 
   if (!image.toLowerCase().startsWith("https://i.imgur.com/")) return null;

@@ -1,14 +1,19 @@
 import PropTypes from "prop-types";
 
-export default function CartItem({ image, name, price }) {
+export default function CartItem({ image, name, price, count }) {
   return (
-    <div className="flex font-ibm">
+    <div className="flex gap-3 p-3 font-ibm">
       <img src={image} alt={"Image of " + name} className="h-24 w-24" />
-      <div className="flex flex-col">
-        <p className="my-1 text-xl font-bold">${price}</p>
+      <div className="flex flex-col justify-center">
+        <div className="flex justify-between">
+          <p className="my-1 text-xl font-bold">${price * count}</p>
+          <p className="my-1 text-base">x{count}</p>
+        </div>
         <p className="my-1 text-base">{name}</p>
       </div>
-      <button>X</button>
+      <button className="h-8 w-8 self-center rounded-xl bg-red-700 text-gray-900 hover:bg-red-800">
+        X
+      </button>
     </div>
   );
 }
@@ -17,4 +22,5 @@ CartItem.propTypes = {
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
 };

@@ -29,7 +29,6 @@ export default function Shop({ cartItems, setCartItems }) {
   if (networkError) return <p>A network error was encountered</p>;
   if (loading) return <p>Loading...</p>;
 
-  console.log(itemsList);
   const cardList = itemsList.map((item) => {
     return (
       <Card

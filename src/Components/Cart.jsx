@@ -14,6 +14,7 @@ export default function Cart({
         image={item.image}
         name={item.name}
         price={item.price}
+        count={item.count}
       ></CartItem>
     );
   });
