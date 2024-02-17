@@ -7,6 +7,10 @@ export default function Cart({
   cartItems,
   setCartItems,
 }) {
+  function clearItems() {
+    setCartItems([]);
+  }
+
   const itemsList = cartItems.map((item) => {
     return (
       <CartItem
@@ -37,7 +41,9 @@ export default function Cart({
         >
           Close
         </button>
-        <button className="text-lg font-bold">Clear</button>
+        <button className="text-lg font-bold" onClick={clearItems}>
+          Clear
+        </button>
       </div>
       <hr />
       <div className="flex-1 overflow-auto">{itemsList}</div>
