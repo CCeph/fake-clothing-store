@@ -23,6 +23,12 @@ export default function Cart({
     );
   });
 
+  const totalPrice = cartItems.reduce(
+    (accumulator, currentItem) =>
+      accumulator + currentItem.price * currentItem.count,
+    0,
+  );
+
   return (
     <aside
       aria-label="cart"
@@ -49,7 +55,7 @@ export default function Cart({
       <div className="flex-1 overflow-auto">{itemsList}</div>
       <hr />
       <div className="flex justify-between gap-20">
-        <p>Total: $NAN</p>
+        <p>Total: ${totalPrice}</p>
         <button className="text-lg font-bold">Checkout</button>
       </div>
     </aside>
