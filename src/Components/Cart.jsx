@@ -49,7 +49,7 @@ export default function Cart({
       data-testid="cart"
       className={
         (!cartVisible && "custom-invisible ") +
-        " fixed right-0 flex h-dvh flex-col bg-black p-7 font-ibm text-white"
+        " fixed right-0 flex h-screen flex-col bg-black p-7 font-ibm text-white"
       }
     >
       <div className="flex justify-between gap-20">

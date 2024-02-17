@@ -3,9 +3,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      height: {
-        "h-dvh": "100dvh",
-      },
       gridTemplateColumns: {
         "auto-fill-100": "repeat(auto-fill, minmax(100px, 1fr))",
         "auto-fit-100": "repeat(auto-fit, minmax(100px, 1fr))",
