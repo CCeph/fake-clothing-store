@@ -9,13 +9,19 @@ import "./App.css";
 function App() {
   const [cartVisible, setCartVisible] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [checkoutMessageActive, setCheckoutMessageActive] = useState(false);
   const { name } = useParams();
 
   return (
     <div className="flex h-screen flex-col items-center">
       <Nav setCartVisible={setCartVisible} cartItems={cartItems} />
       {name === "shop" ? (
-        <Shop cartItems={cartItems} setCartItems={setCartItems} />
+        <Shop
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          checkoutMessageActive={checkoutMessageActive}
+          setCheckoutMessageActive={setCheckoutMessageActive}
+        />
       ) : (
         <Homepage />
       )}
@@ -24,6 +30,8 @@ function App() {
         setCartVisible={setCartVisible}
         cartItems={cartItems}
         setCartItems={setCartItems}
+        checkoutMessageActive={checkoutMessageActive}
+        setCheckoutMessageActive={setCheckoutMessageActive}
       />
     </div>
   );

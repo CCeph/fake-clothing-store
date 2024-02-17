@@ -7,8 +7,10 @@ export default function Card({
   name,
   cartItems,
   setCartItems,
+  setCheckoutMessageActive,
 }) {
   function addItemToCart(id, name, price, image) {
+    setCheckoutMessageActive(false);
     const itemIndex = cartItems.findIndex((item) => item.id === id);
     if (itemIndex === -1) {
       setCartItems([
@@ -49,4 +51,5 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   cartItems: PropTypes.array.isRequired,
   setCartItems: PropTypes.func.isRequired,
+  setCheckoutMessageActive: PropTypes.func.isRequired,
 };

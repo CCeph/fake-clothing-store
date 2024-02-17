@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import PropTypes from "prop-types";
 
-export default function Shop({ cartItems, setCartItems }) {
+export default function Shop({
+  cartItems,
+  setCartItems,
+  setCheckoutMessageActive,
+}) {
   const [itemsList, setItemsList] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [networkError, setNetworkError] = useState(null);
@@ -39,6 +43,7 @@ export default function Shop({ cartItems, setCartItems }) {
         name={item.title}
         cartItems={cartItems}
         setCartItems={setCartItems}
+        setCheckoutMessageActive={setCheckoutMessageActive}
       ></Card>
     );
   });
@@ -67,4 +72,5 @@ export default function Shop({ cartItems, setCartItems }) {
 Shop.propTypes = {
   cartItems: PropTypes.array.isRequired,
   setCartItems: PropTypes.func.isRequired,
+  setCheckoutMessageActive: PropTypes.func.isRequired,
 };
