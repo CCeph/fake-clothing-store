@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/urban.png";
+import PropTypes from "prop-types";
 
 export default function Nav({ setCartVisible, cartItems }) {
   return (
@@ -26,3 +27,8 @@ export default function Nav({ setCartVisible, cartItems }) {
     </nav>
   );
 }
+
+Nav.propTypes = {
+  setCartVisible: PropTypes.func.isRequired,
+  cartItems: PropTypes.array.isRequired,
+};
