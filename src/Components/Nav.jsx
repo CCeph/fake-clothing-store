@@ -6,7 +6,7 @@ export default function Nav({ setCartVisible, cartItems }) {
   return (
     <nav className="flex w-full items-stretch justify-between justify-items-center bg-black font-ibm text-lg font-bold text-white">
       <Link to={"/"}>
-        <img src={logo} className="h-24 w-24" />
+        <img src={logo} className="h-full w-24" />
       </Link>
       <ul className="flex justify-items-center">
         <Link to={"/"} className="flex items-center p-8 hover:bg-gray-800">
