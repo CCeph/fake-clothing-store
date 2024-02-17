@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import Card from "../Components/Card";
 import { expect } from "vitest";
 import { MemoryRouter } from "react-router-dom";
