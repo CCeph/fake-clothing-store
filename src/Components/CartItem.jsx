@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 
 export default function CartItem({ image, name, price, count }) {
   return (
-    <div className="flex gap-3 p-3 font-ibm">
+    <div className="flex justify-around gap-3 p-3 font-ibm">
       <img src={image} alt={"Image of " + name} className="h-24 w-24" />
-      <div className="flex flex-col justify-center">
+      <div className="flex w-40 flex-col justify-center">
         <div className="flex justify-between">
           <p className="my-1 text-xl font-bold">${price * count}</p>
           <p className="my-1 text-base">x{count}</p>
