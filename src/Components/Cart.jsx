@@ -15,10 +15,13 @@ export default function Cart({
     return (
       <CartItem
         key={item.id}
+        id={item.id}
         image={item.image}
         name={item.name}
         price={item.price}
         count={item.count}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
       ></CartItem>
     );
   });
