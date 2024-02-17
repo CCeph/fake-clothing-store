@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       height: {
-        "h-svh": "100svh",
+        "h-dvh": "100dvh",
       },
       gridTemplateColumns: {
         "auto-fill-100": "repeat(auto-fill, minmax(100px, 1fr))",
