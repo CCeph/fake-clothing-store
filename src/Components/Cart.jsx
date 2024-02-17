@@ -40,7 +40,7 @@ export default function Cart({
         <button className="text-lg font-bold">Clear</button>
       </div>
       <hr />
-      <div className="flex-1">{itemsList}</div>
+      <div className="flex-1 overflow-auto">{itemsList}</div>
       <hr />
       <div className="flex justify-between gap-20">
         <p>Total: $NAN</p>
